@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../ProjectCss/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <input type='file' id='fileinput' class="jsCheckPic" data-wh="100|0|1">
-    
-    <script>
-        var saveLoading = '<div class="jsSaveLoading"><div class="Loading-box"><span>儲存中請稍後</span> <i class="fas fa-circle-notch fa-spin fa-3x" style="vertical-align: middle;"></i></div></div>';
-            var jsCheckFile = '<div class="jsErrMessModal"><div class="Modal-box" ><div class="Modal-b-title">提示訊息</div><div class="Modal-b-info"></div><div class="text-right"><div class="Modal-b-close">確認</div></div></div></div>';
+var saveLoading = '<div class="jsSaveLoading"><div class="Loading-box"><span>儲存中請稍後</span> <i class="fas fa-circle-notch fa-spin fa-3x" style="vertical-align: middle;"></i></div></div>';
+        var jsCheckFile = '<div class="jsErrMessModal"><div class="Modal-box" ><div class="Modal-b-title">提示訊息</div><div class="Modal-b-info"></div><div class="text-right"><div class="Modal-b-close">確認</div></div></div></div>';
 $('body').prepend(saveLoading + jsCheckFile);
 $('.js-i-pdf').text("請上傳檔案，檔案大小不可超過30MB，限類型為文書類型");
 $('.js-i-pdf-30').text("請上傳檔案，檔案大小不可超過30MB，限類型為文書類型");
@@ -145,6 +131,3 @@ $('.jsCheckFile').on('change', function () {
 
     }
 });
-    </script>
-</body>
-</html>

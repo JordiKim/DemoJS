@@ -1,0 +1,220 @@
+@mixin icon-style($color: #FFF, $icontent: '\f103', $ff: 'Free' , $fw: 900) {
+    font-family: 'Font Awesome 5 ' + $ff;
+    content: $icontent;
+    color: $color;
+    font-weight: $fw;
+    margin-right: 1px;
+    width: 20px;
+    display: inline-block;
+}
+
+$Dark: #767676;
+
+.text-right{
+    text-align: right;
+}
+/*JavaScript*/
+/*  
+    2017-12-27
+    jsErrMessModal  
+*/
+.jsErrMessModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 15, 0.6);
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    opacity: 0;
+    transition: left 0s .6s, opacity .6s;
+
+    .Modal-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 400px;
+        opacity: 0;
+        background: #f3f3f3;
+        box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.30);
+        transition: opacity .6s;
+        border-radius: 2px;
+        padding: 15px;
+
+        .Modal-b-title {
+            font-size: 20px;
+            padding: 15px;
+            font-weight: bold;
+            color: #2c77ba;
+
+            &:before {
+                @include icon-style(#2c77ba,'\f12a');
+            }
+        }
+
+        .Modal-b-info {
+            font-size: 16px;
+            padding: 5px 15px 30px;
+            color: #828282;
+            min-height: 100px;
+
+            select {
+                width: 100%;
+                padding: 3px;
+            }
+        }
+
+        .Modal-b-change {
+            font-size: 18px;
+            text-align: center;
+            background: #fff421;
+            color: black;
+            padding: 8px 25px;
+            cursor: pointer;
+            display: inline-block;
+
+            &:hover {
+                background: #fff421;
+            }
+        }
+
+        .Modal-b-cancel {
+            font-size: 18px;
+            text-align: center;
+            background: #dc7200;
+            color: white;
+            padding: 8px 25px;
+            cursor: pointer;
+            display: inline-block;
+
+            &:hover {
+                background: #dc7200;
+            }
+        }
+
+        .Modal-b-send {
+            font-size: 18px;
+            text-align: center;
+            background: #50a912;
+            color: white;
+            padding: 8px 25px;
+            cursor: pointer;
+            display: inline-block;
+
+            &:hover {
+                background: #50a912;
+            }
+        }
+
+        .Modal-b-merge {
+            font-size: 18px;
+            text-align: center;
+            background: #2c77ba;
+            color: white;
+            padding: 8px 25px;
+            cursor: pointer;
+            display: inline-block;
+
+            &:hover {
+                background: #2c77ba;
+            }
+        }
+
+        .Modal-b-close, .Modal-b-closed {
+            font-size: 18px;
+            text-align: center;
+            background: #ff6868;
+            color: white;
+            padding: 8px 25px;
+            cursor: pointer;
+            display: inline-block;
+
+            &:hover {
+                background: #ff2828;
+            }
+        }
+    }
+
+    &.jsErrActive {
+        opacity: 1;
+        left: 0;
+        transition: left 0s;
+
+        .Modal-box {
+            opacity: 1;
+            transition: opacity .6s;
+        }
+    }
+}
+
+.mydrop {
+    position: relative;
+    max-width: 200px;
+    width: 100%;
+
+    .selectdrop, .selectdropin {
+        font-size: 1.1em;
+        padding: 6px 13px;
+        border: 0;
+        outline: 0;
+        text-indent: .01px;
+        text-overflow: "";
+        color: $Dark;
+        background: #FFF;
+        text-align: left;
+        border: 1px solid #f3f3f3;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 100%;
+    }
+
+    &:after {
+        @include icon-style(#767676, '\f107');
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        z-index: 0;
+        transform: translateY(-50%);
+        font-size: 1.3em;
+        pointer-events: none !important;
+    }
+}
+
+
+.ess-drop {
+    position: relative;
+    width: 100%;
+    box-shadow: 0 0 0 1px #e0e0e0;
+    border-radius: .25rem;
+
+    select {
+        padding: 5px 13px !important;
+        border: 0;
+        outline: 0;
+        text-indent: .01px;
+        text-overflow: "";
+        color: $Dark;
+        background: #FFF;
+        text-align: left;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    &:after {
+        @include icon-style(#a0a0a0, '\f107');
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        z-index: 0;
+        transform: translateY(-50%);
+        font-size: 1.1em;
+        pointer-events: none !important;
+    }
+}
