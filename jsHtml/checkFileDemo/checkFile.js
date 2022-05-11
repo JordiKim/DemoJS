@@ -4,7 +4,7 @@ $('body').prepend(saveLoading + jsCheckFile);
 $('.js-i-pdf').text("請上傳檔案，檔案大小不可超過30MB，限類型為文書類型");
 $('.js-i-pdf-30').text("請上傳檔案，檔案大小不可超過30MB，限類型為文書類型");
 $('.js-i-sort').text("數字越大，排序越前面");
-$('.js-i-img').text("請上傳圖檔，檔案大小不可超過5MB，限類型為GIF、JPG");//寬為800px 以上 * 高不限，
+$('.js-i-img').text("請上傳圖檔，檔案大小不可超過5MB，限類型為GIF、JPG");//寬為800px 以上 * 高不限
 
 $('.Modal-b-close').on('click', function () {
     $('.jsErrMessModal').removeClass("jsErrActive");
