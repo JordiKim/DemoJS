@@ -1,0 +1,233 @@
+@charset "UTF-8";
+/*JavaScript*/
+/*  
+    2017-12-27
+    jsErrMessModal  
+*/
+.jsErrMessModal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 15, 15, 0.6);
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  opacity: 0;
+  -webkit-transition: left 0s .6s, opacity .6s;
+  transition: left 0s .6s, opacity .6s;
+}
+
+.jsErrMessModal .Modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 400px;
+  opacity: 0;
+  background: #f3f3f3;
+  -webkit-box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s;
+  border-radius: 2px;
+  padding: 15px;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-title {
+  font-size: 20px;
+  padding: 15px;
+  font-weight: bold;
+  color: #2c77ba;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-title:before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  color: #2c77ba;
+  font-weight: 900;
+  margin-right: 1px;
+  width: 20px;
+  display: inline-block;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-info {
+  font-size: 16px;
+  padding: 5px 15px 30px;
+  color: #828282;
+  min-height: 100px;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-info select {
+  width: 100%;
+  padding: 3px;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-change {
+  font-size: 18px;
+  text-align: center;
+  background: #fff421;
+  color: black;
+  padding: 8px 25px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-change:hover {
+  background: #fff421;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-cancel {
+  font-size: 18px;
+  text-align: center;
+  background: #dc7200;
+  color: white;
+  padding: 8px 25px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-cancel:hover {
+  background: #dc7200;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-send {
+  font-size: 18px;
+  text-align: center;
+  background: #50a912;
+  color: white;
+  padding: 8px 25px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-send:hover {
+  background: #50a912;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-merge {
+  font-size: 18px;
+  text-align: center;
+  background: #2c77ba;
+  color: white;
+  padding: 8px 25px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-merge:hover {
+  background: #2c77ba;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-close, .jsErrMessModal .Modal-box .Modal-b-closed {
+  font-size: 18px;
+  text-align: center;
+  background: #ff6868;
+  color: white;
+  padding: 8px 25px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.jsErrMessModal .Modal-box .Modal-b-close:hover, .jsErrMessModal .Modal-box .Modal-b-closed:hover {
+  background: #ff2828;
+}
+
+.jsErrMessModal.jsErrActive {
+  opacity: 1;
+  left: 0;
+  -webkit-transition: left 0s;
+  transition: left 0s;
+}
+
+.jsErrMessModal.jsErrActive .Modal-box {
+  opacity: 1;
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s;
+}
+
+.mydrop {
+  position: relative;
+  max-width: 200px;
+  width: 100%;
+}
+
+.mydrop .selectdrop, .mydrop .selectdropin {
+  font-size: 1.1em;
+  padding: 6px 13px;
+  border: 0;
+  outline: 0;
+  text-indent: .01px;
+  text-overflow: "";
+  color: #767676;
+  background: #FFF;
+  text-align: left;
+  border: 1px solid #f3f3f3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+}
+
+.mydrop:after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  color: #767676;
+  font-weight: 900;
+  margin-right: 1px;
+  width: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  z-index: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.3em;
+  pointer-events: none !important;
+}
+
+.ess-drop {
+  position: relative;
+  width: 100%;
+  -webkit-box-shadow: 0 0 0 1px #e0e0e0;
+          box-shadow: 0 0 0 1px #e0e0e0;
+  border-radius: .25rem;
+}
+
+.ess-drop select {
+  padding: 5px 13px !important;
+  border: 0;
+  outline: 0;
+  text-indent: .01px;
+  text-overflow: "";
+  color: #767676;
+  background: #FFF;
+  text-align: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.ess-drop:after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  color: #a0a0a0;
+  font-weight: 900;
+  margin-right: 1px;
+  width: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  z-index: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.1em;
+  pointer-events: none !important;
+}
+/*# sourceMappingURL=style.css.map */
